@@ -1,0 +1,17 @@
+delegateName: harness-delegate
+accountId: X1Mtb89-RNOvXGv5vfFJYg
+delegateToken: M2M3ODQwNGM1YWQzNzliYTU2NWRkNTlkNGU4NDdjN2Y=
+managerEndpoint: https://app.harness.io
+delegateDockerImage: us-docker.pkg.dev/gar-prod-setup/harness-public/harness/delegate:26.01.88303
+replicas: 1
+upgrader:
+  enabled: true
+
+# This limits the memory usage so it fits on your t3.small instance
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "1"
+    memory: "1.5Gi"

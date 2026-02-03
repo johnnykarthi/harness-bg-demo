@@ -17,3 +17,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 8080
+          # Add these lines:
+          env:
+            - name: APP_COLOR
+              value: "{{ .Values.appColor }}"
