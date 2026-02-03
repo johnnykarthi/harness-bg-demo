@@ -1,0 +1,32 @@
+{{- if .Values.green.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-app-green
+  labels:
+    app: spring-app
+    color: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-app
+      color: green
+  template:
+    metadata:
+      labels:
+        app: spring-app
+        color: green
+    spec:
+      containers:
+        - name: spring-app
+          image: "{{ .Values.repository }}:{{ .Values.green.tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APP_VERSION
+              value: "{{ .Values.green.versionLabel }}"
+            - name: APP_COLOR
+              value: "green"
+{{- end }}

@@ -1,0 +1,17 @@
+# The common image repository
+repository: 762102778335.dkr.ecr.us-east-1.amazonaws.com/blue-green-demo
+
+# The "Switch" - Change this to 'blue' or 'green' to route traffic
+trafficTo: green
+
+# Configuration for the Blue Version
+blue:
+  enabled: true
+  tag: "v1"
+  versionLabel: "v1"
+
+# Configuration for the Green Version
+green:
+  enabled: true
+  tag: "v2"
+  versionLabel: "v2"

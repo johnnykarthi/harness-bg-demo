@@ -1,0 +1,3 @@
+image:
+  repository: 762102778335.dkr.ecr.us-east-1.amazonaws.com/blue-green-demo
+  tag: v1
