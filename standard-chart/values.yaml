@@ -4,3 +4,6 @@ image:
 
 # Add this new line!
 appColor: "green"
+
+app:
+  version: 6.0.0
